@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Khaled ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e293b);
+overflow-x:hidden;
+color:white;
+text-align:center;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+h1{
+font-size:55px;
+margin-bottom:20px;
+animation:fade 2s;
+}
+
+button{
+padding:18px 40px;
+font-size:22px;
+border:none;
+border-radius:40px;
+cursor:pointer;
+background:#ff4d88;
+color:white;
+transition:.4s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+#message{
+display:none;
+max-width:900px;
+margin:auto;
+padding:40px;
+font-size:25px;
+line-height:2;
+white-space:pre-wrap;
+}
+
+.cursor{
+border-left:3px solid white;
+animation:blink .7s infinite;
+}
+
+#gallery{
+display:none;
+margin:70px auto;
+font-size:35px;
+}
+
+.heart{
+position:fixed;
+color:#ff4d88;
+font-size:25px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+@keyframes blink{
+50%{
+border-color:transparent;
+}
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(-20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+<h1>🎂 Happy Birthday Khaled ❤️</h1>
+
+<button onclick="start()">🎁 Open Your Gift</button>
+
+</div>
+
+<div id="message"></div>
+
+<div id="gallery">
+📷 هنا هنضيف الصور والفيديوهات بعدين ❤️
+</div>
+
+<script>
+
+const text=`كل سنه وانت طيب كل سنه وانت اجمل حاجه حصلت في حياتي وهفضل ديما اقول كده عشان انت فعلا احلي حاجه حصلتلي بجد ♥️.
+كل سنه وانت جميل وطيب وحنين اوي عليا وديما جمبي ومعايا وعمرك ما سبتني خالص وانا مدايقه وديما بتسمعني حتي لو انت فيك اي عمرك ما حسستني بحاجة وديما بتسمعني اه بدايق عشان بكون نفسي اعمل معاك زي ما بتعمل معايا واسمعك واحاول افكر معاك واديك حلول بس انت عارف انا ديما جمبك ومعاك حتي من غير ما تحكي انا جمبك و هفضل ديما بشجعك و في ضهرك علي اي حاجه بتعملها عشان انت بجد شخص جميل وطيب وحنين وفعلا تستاهل كل حاجه حلوه في الدنيا دي ولله ♥️♥️♥️.
+
+عمري ما تخيلت أننا ممكن نوصل للمرحله دي كنت فاكره هنبقي صحاب وبيست فريند وبس بس حصلت احلي حاجه في الدنيا و بقيت انا و دودتي مع بعض ♥️.
+
+يمكن مش بعرف اعبر عن الي جوايا او مش بقولو ليك كله بس بجد انت نعمه بدعي ربنا يحفظهالي ويديمها ليا يارب
+واشوفك ديما بخير ومبسوط و الضحكه متفارقش وشك ابدا وربنا يحققلك كل الي نفسك فيه يارب ♥️.
+
+شكرا لانك موجود ديما معايا وفي حياتي وجمبي ♥️.
+
+وشكرا علي كل مره ركزت في كلامي فيها وعرفت بحب اي ومش بحب اي و بجد عمري ما هنسي ابدا انك كل مره بشوفك فيها بتجيبلي حاجه بحبها رغم أن بيكون جمبي اكتر حاجه بحبها وهي انت بجد شكرا انا مهما اتكلم عمري ما هديك حقك في كلام ابدا 😭♥️
+
+وشكرا علي كل لحظه حلوه عيشتها معاك ولسه هعيشها معاك ♥️هفضل كل يوم اختارك من بين كل الناس لانك بالنسبالي بجد اجمل اختيار واغلي انسان علي قلبي وفي حياتي ♥️ مهما حصل بينا أنا عمري ما هبطل احبك أو مكانتك في قلبي هتتغير انت هتفضل ديما زي ما انت و حبي ليك هيفضل ديما يزيد ♥️.
+
+بحبك اوي بجد وبحب صوت ضحكتك و طريقتك و صوتك و لما بتقلدني و تقعد ترخم عليا بجد بحب كل حاجه بنا وعمري ما نسيت ولا اي حاجه ♥️.
+
+ربنا يخليك ليا وميحرمنيش منك يا احن واطيب حد في حياتي ♥️♥️.`;
+
+let i=0;
+
+function start(){
+
+document.querySelector(".hero").style.display="none";
+
+let box=document.getElementById("message");
+
+box.style.display="block";
+
+let timer=setInterval(()=>{
+
+box.innerHTML=text.substring(0,i)+"<span class='cursor'></span>";
+
+i++;
+
+if(i>text.length){
+
+clearInterval(timer);
+
+document.getElementById("gallery").style.display="block";
+
+}
+
+},35);
+
+}
+
+setInterval(()=>{
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*30)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),6000);
+
+},300);
+
+</script>
+
+</body>
+</html>
