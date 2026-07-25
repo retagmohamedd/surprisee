@@ -1,338 +1,143 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Khaled ❤️</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <title>🎁 A Special Gift</title>
 
-<style>
-#passwordScreen{
-    position:fixed;
-    inset:0;
-    background:linear-gradient(135deg,#3b1d4d,#7d3c98);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:99999;
-}
+    <link rel="stylesheet" href="style.css">
 
-.password-box{
-    width:350px;
-    background:rgba(255,255,255,.12);
-    backdrop-filter:blur(12px);
-    border:1px solid rgba(255,255,255,.2);
-    border-radius:20px;
-    padding:35px;
-    text-align:center;
-    color:white;
-    box-shadow:0 20px 40px rgba(0,0,0,.35);
-}
-
-.password-box h1{
-    font-size:55px;
-    margin-bottom:10px;
-}
-
-.password-box h2{
-    margin-bottom:10px;
-}
-
-.password-box p{
-    opacity:.9;
-}
-
-.password-box input{
-    width:100%;
-    padding:14px;
-    margin-top:20px;
-    border:none;
-    border-radius:10px;
-    outline:none;
-    font-size:18px;
-    box-sizing:border-box;
-}
-
-.password-box button{
-    margin-top:20px;
-    width:100%;
-    padding:14px;
-    border:none;
-    border-radius:10px;
-    background:#ff4d88;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.password-box button:hover{
-    background:#ff246d;
-    transform:scale(1.03);
-}
-
-#error{
-    color:#ffd6d6;
-    margin-top:15px;
-    font-size:15px;
-}
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Great+Vibes&display=swap');
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Cairo',sans-serif;
-}
-
-body{
-    background:linear-gradient(135deg,#1a1025,#3b1d3d,#111827);
-    color:white;
-    text-align:center;
-    overflow-x:hidden;
-    min-height:100vh;
-}
-
-
-/* الصفحة الأولى */
-
-.hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-}
-
-
-h1{
-    font-family:'Great Vibes',cursive;
-    font-size:80px;
-    color:#ffd1e6;
-    text-shadow:0 0 25px #ff4d88;
-    margin-bottom:40px;
-    animation:fade 2s;
-}
-
-
-/* زرار الهدية */
-
-button{
-    padding:18px 50px;
-    border:none;
-    border-radius:50px;
-    background:linear-gradient(45deg,#ff4d88,#ff9ac2);
-    color:white;
-    font-size:22px;
-    cursor:pointer;
-    box-shadow:0 0 30px #ff4d88;
-    transition:.4s;
-}
-
-
-button:hover{
-    transform:scale(1.1);
-}
-
-
-/* الرسالة */
-
-#message{
-    display:none;
-    max-width:850px;
-    margin:50px auto;
-    padding:45px;
-
-    background:rgba(255,255,255,.12);
-    border-radius:35px;
-    border:1px solid rgba(255,255,255,.3);
-
-    font-size:23px;
-    line-height:2.2;
-
-    box-shadow:0 0 40px rgba(255,77,136,.4);
-
-    backdrop-filter:blur(12px);
-}
-
-
-/* المؤشر */
-
-.cursor{
-    border-left:3px solid #ffb6d9;
-    animation:blink .7s infinite;
-}
-
-
-/* الصور */
-
-#gallery{
-    display:none;
-    margin:70px auto;
-    font-size:35px;
-}
-
-
-/* القلوب */
-
-.heart{
-    position:fixed;
-    bottom:-20px;
-    color:#ff6fa5;
-    font-size:25px;
-    animation:float 7s linear infinite;
-    text-shadow:0 0 15px pink;
-}
-
-
-/* الحركات */
-
-@keyframes float{
-
-    0%{
-        transform:translateY(0) rotate(0deg);
-        opacity:1;
-    }
-
-    100%{
-        transform:translateY(-120vh) rotate(360deg);
-        opacity:0;
-    }
-}
-
-
-@keyframes blink{
-
-    50%{
-        border-color:transparent;
-    }
-
-}
-
-
-@keyframes fade{
-
-    from{
-        opacity:0;
-        transform:translateY(-40px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
-
-
-/* للموبايل */
-
-@media(max-width:600px){
-
-h1{
-    font-size:55px;
-}
-
-#message{
-    margin:20px;
-    padding:25px;
-    font-size:18px;
-}
-
-button{
-    font-size:18px;
-}
-
-}
-
-
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="hero">
+<!-- خلفية القلوب -->
+<div id="hearts"></div>
 
-<h1>🎂 Happy Birthday Khaled ❤️</h1>
+<!-- شاشة الباسورد -->
 
-<button onclick="start()">🎁 Open Your Gift</button>
+<section id="passwordPage">
+
+    <div class="glass">
+
+        <h1>🎁</h1>
+
+        <h2>عندي ليك مفاجأة ❤️</h2>
+
+        <p>اكتب كلمة السر</p>
+
+        <input
+            id="password"
+            type="password"
+            placeholder="••••••">
+
+        <button onclick="checkPassword()">
+            فتح الهدية
+        </button>
+
+        <span id="error"></span>
+
+    </div>
+
+</section>
+
+<!-- الصفحة الرئيسية -->
+
+<section id="home" class="hidden">
+
+    <div class="gift">
+
+        <img
+            src="https://cdn-icons-png.flaticon.com/512/4213/4213958.png"
+            id="giftBox">
+
+        <h2>اضغط على الهدية 🎁</h2>
+
+    </div>
+
+</section>
+
+<!-- الرسالة -->
+
+<section id="letter" class="hidden">
+
+    <div class="card">
+
+        <h1>💌</h1>
+
+        <h2>رسالة ليك</h2>
+
+        <p id="typing"></p>
+
+        <button onclick="nextPhotos()">
+            التالي ❤️
+        </button>
+
+    </div>
+
+</section>
+
+<!-- الصور -->
+
+<section id="gallery" class="hidden">
+
+<h2>📸 ذكرياتنا</h2>
+
+<div class="photos">
+
+<img src="images/1.jpg">
+
+<img src="images/2.jpg">
+
+<img src="images/3.jpg">
+
+<img src="images/4.jpg">
 
 </div>
 
-<div id="message"></div>
+<button onclick="finishGift()">
 
-<div id="gallery">
-📷 هنا هنضيف الصور والفيديوهات بعدين ❤️
+التالي 🎂
+
+</button>
+
+</section>
+
+<!-- النهاية -->
+
+<section id="finish" class="hidden">
+
+<div class="finishCard">
+
+<h1>🎂</h1>
+
+<h2>Happy Birthday ❤️</h2>
+
+<p>
+
+كل سنة وانت أغلى شخص عندي 💖
+
+أتمنى تكون السنة دي أحلى سنة في حياتك.
+
+</p>
+
 </div>
 
-<script>
+</section>
 
-const text=`كل سنه وانت طيب كل سنه وانت اجمل حاجه حصلت في حياتي وهفضل ديما اقول كده عشان انت فعلا احلي حاجه حصلتلي بجد ♥️.
-كل سنه وانت جميل وطيب وحنين اوي عليا وديما جمبي ومعايا وعمرك ما سبتني خالص وانا مدايقه وديما بتسمعني حتي لو انت فيك اي عمرك ما حسستني بحاجة وديما بتسمعني اه بدايق عشان بكون نفسي اعمل معاك زي ما بتعمل معايا واسمعك واحاول افكر معاك واديك حلول بس انت عارف انا ديما جمبك ومعاك حتي من غير ما تحكي انا جمبك و هفضل ديما بشجعك و في ضهرك علي اي حاجه بتعملها عشان انت بجد شخص جميل وطيب وحنين وفعلا تستاهل كل حاجه حلوه في الدنيا دي ولله ♥️♥️♥️.
+<audio
+id="music"
+loop>
 
-عمري ما تخيلت أننا ممكن نوصل للمرحله دي كنت فاكره هنبقي صحاب وبيست فريند وبس بس حصلت احلي حاجه في الدنيا و بقيت انا و دودتي مع بعض ♥️.
+<source src="music.mp3">
 
-يمكن مش بعرف اعبر عن الي جوايا او مش بقولو ليك كله بس بجد انت نعمه بدعي ربنا يحفظهالي ويديمها ليا يارب
-واشوفك ديما بخير ومبسوط و الضحكه متفارقش وشك ابدا وربنا يحققلك كل الي نفسك فيه يارب ♥️.
+</audio>
 
-شكرا لانك موجود ديما معايا وفي حياتي وجمبي ♥️.
-
-وشكرا علي كل مره ركزت في كلامي فيها وعرفت بحب اي ومش بحب اي و بجد عمري ما هنسي ابدا انك كل مره بشوفك فيها بتجيبلي حاجه بحبها رغم أن بيكون جمبي اكتر حاجه بحبها وهي انت بجد شكرا انا مهما اتكلم عمري ما هديك حقك في كلام ابدا 😭♥️
-
-وشكرا علي كل لحظه حلوه عيشتها معاك ولسه هعيشها معاك ♥️هفضل كل يوم اختارك من بين كل الناس لانك بالنسبالي بجد اجمل اختيار واغلي انسان علي قلبي وفي حياتي ♥️ مهما حصل بينا أنا عمري ما هبطل احبك أو مكانتك في قلبي هتتغير انت هتفضل ديما زي ما انت و حبي ليك هيفضل ديما يزيد ♥️.
-
-بحبك اوي بجد وبحب صوت ضحكتك و طريقتك و صوتك و لما بتقلدني و تقعد ترخم عليا بجد بحب كل حاجه بنا وعمري ما نسيت ولا اي حاجه ♥️.
-
-ربنا يخليك ليا وميحرمنيش منك يا احن واطيب حد في حياتي ♥️♥️.`;
-
-let i=0;
-
-function start(){
-
-document.querySelector(".hero").style.display="none";
-
-let box=document.getElementById("message");
-
-box.style.display="block";
-
-let timer=setInterval(()=>{
-
-box.innerHTML=text.substring(0,i)+"<span class='cursor'></span>";
-
-i++;
-
-if(i>text.length){
-
-clearInterval(timer);
-
-document.getElementById("gallery").style.display="block";
-
-}
-
-},35);
-
-}
-
-setInterval(()=>{
-
-let heart=document.createElement("div");
-
-heart.className="heart";
-
-heart.innerHTML="❤️";
-
-heart.style.left=Math.random()*100+"vw";
-
-heart.style.fontSize=(20+Math.random()*30)+"px";
-
-document.body.appendChild(heart);
-
-setTimeout(()=>heart.remove(),6000);
-
-},300);
-
-</script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
