@@ -8,7 +8,75 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+#passwordScreen{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(135deg,#3b1d4d,#7d3c98);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
 
+.password-box{
+    width:350px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    color:white;
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.password-box h1{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.password-box h2{
+    margin-bottom:10px;
+}
+
+.password-box p{
+    opacity:.9;
+}
+
+.password-box input{
+    width:100%;
+    padding:14px;
+    margin-top:20px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:18px;
+    box-sizing:border-box;
+}
+
+.password-box button{
+    margin-top:20px;
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#ff4d88;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.password-box button:hover{
+    background:#ff246d;
+    transform:scale(1.03);
+}
+
+#error{
+    color:#ffd6d6;
+    margin-top:15px;
+    font-size:15px;
+}
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Great+Vibes&display=swap');
 
 *{
