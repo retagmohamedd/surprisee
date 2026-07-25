@@ -9,104 +9,175 @@
 
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Great+Vibes&display=swap');
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Cairo',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0f172a,#1e293b);
-overflow-x:hidden;
-color:white;
-text-align:center;
+    background:linear-gradient(135deg,#1a1025,#3b1d3d,#111827);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+    min-height:100vh;
 }
+
+
+/* الصفحة الأولى */
 
 .hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
+
 
 h1{
-font-size:55px;
-margin-bottom:20px;
-animation:fade 2s;
+    font-family:'Great Vibes',cursive;
+    font-size:80px;
+    color:#ffd1e6;
+    text-shadow:0 0 25px #ff4d88;
+    margin-bottom:40px;
+    animation:fade 2s;
 }
+
+
+/* زرار الهدية */
 
 button{
-padding:18px 40px;
-font-size:22px;
-border:none;
-border-radius:40px;
-cursor:pointer;
-background:#ff4d88;
-color:white;
-transition:.4s;
+    padding:18px 50px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(45deg,#ff4d88,#ff9ac2);
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    box-shadow:0 0 30px #ff4d88;
+    transition:.4s;
 }
 
+
 button:hover{
-transform:scale(1.08);
+    transform:scale(1.1);
+}
+
+
+/* الرسالة */
+
+#message{
+    display:none;
+    max-width:850px;
+    margin:50px auto;
+    padding:45px;
+
+    background:rgba(255,255,255,.12);
+    border-radius:35px;
+    border:1px solid rgba(255,255,255,.3);
+
+    font-size:23px;
+    line-height:2.2;
+
+    box-shadow:0 0 40px rgba(255,77,136,.4);
+
+    backdrop-filter:blur(12px);
+}
+
+
+/* المؤشر */
+
+.cursor{
+    border-left:3px solid #ffb6d9;
+    animation:blink .7s infinite;
+}
+
+
+/* الصور */
+
+#gallery{
+    display:none;
+    margin:70px auto;
+    font-size:35px;
+}
+
+
+/* القلوب */
+
+.heart{
+    position:fixed;
+    bottom:-20px;
+    color:#ff6fa5;
+    font-size:25px;
+    animation:float 7s linear infinite;
+    text-shadow:0 0 15px pink;
+}
+
+
+/* الحركات */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+
+@keyframes blink{
+
+    50%{
+        border-color:transparent;
+    }
+
+}
+
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* للموبايل */
+
+@media(max-width:600px){
+
+h1{
+    font-size:55px;
 }
 
 #message{
-display:none;
-max-width:900px;
-margin:auto;
-padding:40px;
-font-size:25px;
-line-height:2;
-white-space:pre-wrap;
+    margin:20px;
+    padding:25px;
+    font-size:18px;
 }
 
-.cursor{
-border-left:3px solid white;
-animation:blink .7s infinite;
+button{
+    font-size:18px;
 }
 
-#gallery{
-display:none;
-margin:70px auto;
-font-size:35px;
 }
 
-.heart{
-position:fixed;
-color:#ff4d88;
-font-size:25px;
-animation:float 6s linear infinite;
-}
-
-@keyframes float{
-0%{
-transform:translateY(100vh);
-opacity:1;
-}
-100%{
-transform:translateY(-120vh);
-opacity:0;
-}
-}
-
-@keyframes blink{
-50%{
-border-color:transparent;
-}
-}
-
-@keyframes fade{
-from{
-opacity:0;
-transform:translateY(-20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
 
 </style>
 </head>
